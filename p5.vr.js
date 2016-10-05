@@ -33,13 +33,12 @@ p5.prototype.updateStereo = function(){
 
 p5.prototype.VRorbitControl = function(){
 
-  //rotateZ(radians(rotationZ));
-  //rotateX(radians(rotationX));
-  // rotateY(radians(rotationY));
+  // rotateZ(radians(rotationZ));
+  this.rotateX(radians(rotationY) + HALF_PI);
+  this.rotateY(radians(rotationX));
 
-  if(this.mouseIsPressed){
-    this.rotateY((this.mouseX - this.width / 2) / (this.width / 2));
-    this.rotateX((this.mouseY - this.height / 2) / (this.width / 2));
-  }
+    // this.rotateY((this.mouseX - this.width / 2) / (this.width / 2));
+    // this.rotateX((this.mouseY - this.height / 2) / (this.width / 2));
+
   return this;
 };
