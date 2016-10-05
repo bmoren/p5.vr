@@ -8,7 +8,7 @@ coming soon...
 ## Documentation
 
 #### createStereoCanvas(renderer)
-creates a duplicate stereo canvas which fills the screen.
+creates a stereo canvas which fills the screen. You do not need to use the normal createCanvas() when using createStereoCanvas()
 
 ```javascript
 function setup(){
@@ -36,9 +36,8 @@ function draw() {
 add sensor/gyroscope based orbit control to the camera in 3D scenes
 ```javascript
 function draw() {
-VRorbitControl()
-
-//...
+  VRorbitControl()
+  //...
 
 }
 ```
