@@ -1,9 +1,14 @@
 # p5.vr
-### stereo VR and orbit controls for p5.js
----
+![p5.vr](p5.vr.png)
+#### VR stereo canvas and orbit controls for p5.js
+
+## Live examples
+coming soon...
+
+## Documentation
 
 #### createStereoCanvas(renderer)
-creates a duplicate stereo canvas for the right eye
+creates a duplicate stereo canvas which fills the screen.
 
 ```javascript
 function setup(){
@@ -14,7 +19,7 @@ function setup(){
 ```
 
 #### updateStereo()
-updates the stereo canvas to a copy of the original p5 cavnas, this should be the last thing in the draw step
+keep the right and left eyes in sync. This should be the last thing in the draw loop.
 ```javascript
 function draw() {
 
@@ -28,7 +33,7 @@ function draw() {
 ```
 
 #### VRorbitControl()
-add orbit control to the camera in 3D scenes
+add sensor/gyroscope based orbit control to the camera in 3D scenes
 ```javascript
 function draw() {
 VRorbitControl()
