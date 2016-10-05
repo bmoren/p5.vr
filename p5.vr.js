@@ -1,11 +1,11 @@
-console.log("p5.vr");
+console.log("+~+~ p5.vr ~+~+");
 
 p5.prototype._duplicateCanvas
-p5.prototype._originalCanvass
+p5.prototype._originalCanvas
 
-p5.prototype.stereoCanvas = function(){
+p5.prototype.createStereoCanvas = function(renderer){
 
-  createCanvas(windowWidth/2, windowHeight);
+  createCanvas(windowWidth/2, windowHeight, renderer);
 
   _originalCanvas = document.getElementById('defaultCanvas0');
   // console.log(_originalCanvas);
@@ -31,6 +31,15 @@ p5.prototype.updateStereo = function(){
   _duplicateCanvas.getContext('2d').drawImage(_originalCanvas, 0, 0);
 }
 
-p5.prototype.orbitControls = function(){
+p5.prototype.VRorbitControl = function(){
 
-}
+  //rotateZ(radians(rotationZ));
+  //rotateX(radians(rotationX));
+  // rotateY(radians(rotationY));
+
+  if(this.mouseIsPressed){
+    this.rotateY((this.mouseX - this.width / 2) / (this.width / 2));
+    this.rotateX((this.mouseY - this.height / 2) / (this.width / 2));
+  }
+  return this;
+};

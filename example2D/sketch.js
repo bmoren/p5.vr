@@ -4,7 +4,7 @@ var px, py, x , y;
 var speed = 30;
 
 function setup() {
-  stereoCanvas();
+  createStereoCanvas();
   x = width / 2
   y = height / 2;
 }
