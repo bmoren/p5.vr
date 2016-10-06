@@ -8,7 +8,7 @@ coming soon...
 ## Documentation
 
 #### createStereoCanvas(renderer)
-creates a stereo canvas which fills the screen. You do not need to use the normal createCanvas() when using createStereoCanvas()
+Creates a stereo canvas which fills the screen. You do not need to use the normal createCanvas() when using createStereoCanvas()
 
 ```javascript
 function setup(){
@@ -19,7 +19,7 @@ function setup(){
 ```
 
 #### updateStereo()
-keep the right and left eyes in sync. This should be the last thing in the draw loop.
+Keep the right and left eyes in sync. This should be the last thing in the draw loop.
 ```javascript
 function draw() {
 
@@ -33,7 +33,7 @@ function draw() {
 ```
 
 #### VRorbitControl()
-add sensor/gyroscope based orbit control to the camera in 3D scenes
+Add sensor/gyroscope based orbit control to the camera in 3D scenes
 ```javascript
 function draw() {
   VRorbitControl()

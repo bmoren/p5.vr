@@ -8,7 +8,6 @@ p5.prototype.createStereoCanvas = function(renderer){
   createCanvas(windowWidth/2, windowHeight, renderer);
 
   _originalCanvas = document.getElementById('defaultCanvas0');
-  // console.log(_originalCanvas);
 
   _duplicateCanvas = document.createElement('canvas');
   _duplicateCanvas.id = "duplicateCanvas";
@@ -31,11 +30,27 @@ p5.prototype.updateStereo = function(){
   _duplicateCanvas.getContext('2d').drawImage(_originalCanvas, 0, 0);
 }
 
+p5.prototype.vrX = function(){
+  var x = radians(rotationY) + HALF_PI;
+  return x;
+}
+
+p5.prototype._compassdir = false;
+  window.addEventListener('deviceorientation', function(e) {
+      _compassdir = e.webkitCompassHeading;
+  })
+
+p5.prototype.vrY = function(){
+
+  return radians(_compassdir);
+
+}
+
 p5.prototype.VRorbitControl = function(){
 
   // rotateZ(radians(rotationZ));
-  this.rotateX(radians(rotationY) + HALF_PI);
-  this.rotateY(radians(rotationX));
+  this.rotateX( vrX() );
+  this.rotateY( vrY() );
 
     // this.rotateY((this.mouseX - this.width / 2) / (this.width / 2));
     // this.rotateX((this.mouseY - this.height / 2) / (this.width / 2));

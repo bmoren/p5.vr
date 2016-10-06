@@ -10,6 +10,8 @@ function draw(){
   //drag to move the world.
   VRorbitControl();
 
+  // console.log( vrX() )
+
   normalMaterial();
   translate(0, 0, -600);
   for(var i = 0; i <= 12; i++){
