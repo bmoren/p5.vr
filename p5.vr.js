@@ -41,9 +41,7 @@ p5.prototype._compassdir = false;
   })
 
 p5.prototype.vrY = function(){
-
   return radians(_compassdir);
-
 }
 
 p5.prototype.VRorbitControl = function(){
@@ -51,9 +49,6 @@ p5.prototype.VRorbitControl = function(){
   // rotateZ(radians(rotationZ));
   this.rotateX( vrX() );
   this.rotateY( vrY() );
-
-    // this.rotateY((this.mouseX - this.width / 2) / (this.width / 2));
-    // this.rotateX((this.mouseY - this.height / 2) / (this.width / 2));
 
   return this;
 };

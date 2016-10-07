@@ -41,3 +41,22 @@ function draw() {
 
 }
 ```
+
+#### vrX()
+returns the X orientation of of the orbit
+```javascript
+function draw() {
+  console.log( vrX() )
+  //...
+}
+```
+
+#### vrY()
+returns the Y orientation of of the orbit, returns false if the browser cannot get the webkitCompassHeading
+```javascript
+function draw() {
+  console.log( vrY() )
+  //...
+}
+```
+
