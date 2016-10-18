@@ -16,7 +16,9 @@ iPhone 6s
 ```
 
 ## Live examples
-coming soon...
+code found in the examples folder. 
++ [Basic 2D example](https://bmoren.github.io/p5.vr/examples/basic2D/)
++ [Basic 3D example](https://bmoren.github.io/p5.vr/examples/basic3D/)
 
 ## Documentation
 
