@@ -1,6 +1,9 @@
 function setup(){
   // createCanvas(710, 400, WEBGL);
-  createStereoCanvas(WEBGL);
+  createStereoCanvas(WEBGL, 50);
+  teapot = loadModel('teapot.obj');
+  orientationLock();
+
 }
 
 function draw(){
@@ -8,11 +11,13 @@ function draw(){
   var radius = width * 1.5;
 
   VRorbitControl();
-  console.log( vrX() ) 
+  // orbitControl();
+  console.log( vrX() )
 
   normalMaterial();
 
-  box();
+  // box();
+  model(teapot);
 
 
   updateStereo();
