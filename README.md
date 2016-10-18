@@ -22,7 +22,7 @@ code found in the examples folder
 
 ## Documentation
 
-#### createStereoCanvas(renderer, bufferDistance)
+#### `createStereoCanvas(renderer, bufferDistance)`
 Creates a stereo canvas which fills the screen. You do not need to use the normal createCanvas() when using createStereoCanvas().  
 bufferDistance adds space between the stereo images (in pixels) which can be used to push the images apart from each other to reduce eye strain. play with this value depending on your phone and viewer combo
 ```javascript
@@ -32,7 +32,7 @@ function setup(){
 }
 ```
 
-#### updateStereo()
+#### `updateStereo()`
 Keep the right and left eyes in sync. This should be the last thing in the draw loop.
 ```javascript
 function draw() {
@@ -46,7 +46,7 @@ function draw() {
 }
 ```
 
-#### VRorbitControl()
+#### `VRorbitControl()`
 Add sensor/gyroscope based orbit control to the camera in 3D scenes
 ```javascript
 function draw() {
@@ -55,7 +55,7 @@ function draw() {
 }
 ```
 
-#### orientationLock()
+#### `orientationLock()`
 locks the phone in landscape mode to prevent it from going to portrait or doing a landscape 'flip'. coming soon, if this is even possible......
 ```javascript
 function setup(){
@@ -63,7 +63,7 @@ function setup(){
 }
 ```
 
-#### vrX()
+#### `vrX()`
 returns the X orientation of of the orbit. The wide axis when looking at a 'landscape' mode phone. Returns false if the browser cannot get the webkitCompassHeading
 ```javascript
 function draw() {
@@ -72,7 +72,7 @@ function draw() {
 }
 ```
 
-#### vrY()
+#### `vrY()`
 returns the Y orientation of of the orbit.
 ```javascript
 function draw() {
@@ -81,7 +81,7 @@ function draw() {
 }
 ```
 
-#### [deviceOrientation](http://p5js.org/reference/#/p5/deviceOrientation)
+#### [`deviceOrientation`](http://p5js.org/reference/#/p5/deviceOrientation)
 p5js' standard system variable deviceOrientation always contains the orientation of the device. The value of this variable will either be set 'landscape' or 'portrait'. If no data is available it will be set to 'undefined'.
 
 ## Full example
