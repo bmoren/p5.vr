@@ -7,7 +7,7 @@ function setup(){
 }
 
 function draw(){
-  background(250);
+  background(0);
   var radius = width * 1.5;
 
   VRorbitControl();

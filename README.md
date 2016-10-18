@@ -8,17 +8,17 @@ iPhone 6s
 ## Tested Viewers
 + Google Cardboard (Sundance Edition)
 
-## Tips
+## Live examples
+code found in the examples folder
++ [Basic 2D example](https://bmoren.github.io/p5.vr/examples/basic2D/)
++ [Basic 3D example](https://bmoren.github.io/p5.vr/examples/basic3D/)
+
+## Setup
 + [using Safari's tethered development tools](http://appletoolbox.com/2014/05/use-web-inspector-debug-mobile-safari/)
 + for most stable results, add the following inside of your `index.html`'s head tag
 ```html
 <meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
 ```
-
-## Live examples
-code found in the examples folder. 
-+ [Basic 2D example](https://bmoren.github.io/p5.vr/examples/basic2D/)
-+ [Basic 3D example](https://bmoren.github.io/p5.vr/examples/basic3D/)
 
 ## Documentation
 
@@ -84,6 +84,26 @@ function draw() {
 #### [deviceOrientation](http://p5js.org/reference/#/p5/deviceOrientation)
 p5js' standard system variable deviceOrientation always contains the orientation of the device. The value of this variable will either be set 'landscape' or 'portrait'. If no data is available it will be set to 'undefined'.
 
+## Full example
+```javascript
+function setup(){
+  createStereoCanvas(WEBGL, 50); //make a new stereo canvas with a 50 pixel buffer between each eye to reduce eyestrain.
+  teapot = loadModel('teapot.obj');
+  orientationLock(); //not yet functioning.
+
+}
+
+function draw(){
+  VRorbitControl(); // enable & update the X/Y vr orbit controls for a 3D scene, this is not needed for a 2D scene.
+
+  //add something to the scene
+  normalMaterial();
+  model(teapot);
+
+
+  updateStereo(); //update the Stereo Image, without this, the 2 eyes will not be in sync.
+}
+```
 
 
 
