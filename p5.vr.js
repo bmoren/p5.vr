@@ -5,6 +5,7 @@ p5.prototype._originalCanvas
 
 p5.prototype.createStereoCanvas = function(renderer, eyeBuffer){
   var eyeBuffer = (typeof eyeBuffer !== 'undefined') ?  eyeBuffer : 0;
+  if(renderer != WEBGL && renderer > 0){ eyeBuffer = renderer }
 
   createCanvas((windowWidth/2)-eyeBuffer, windowHeight, renderer);
 

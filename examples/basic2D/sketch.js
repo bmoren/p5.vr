@@ -4,12 +4,13 @@ var px, py, x , y;
 var speed = 30;
 
 function setup() {
-  createStereoCanvas();
+  createStereoCanvas(50);
   x = width / 2
   y = height / 2;
 }
 
 function draw() {
+  background(0)
   fill(random(255),random(255),random(255))
   stroke(255)
   px = x;
