@@ -21,7 +21,7 @@ coming soon...
 ## Documentation
 
 #### createStereoCanvas(renderer, bufferDistance)
-Creates a stereo canvas which fills the screen. You do not need to use the normal createCanvas() when using createStereoCanvas()
+Creates a stereo canvas which fills the screen. You do not need to use the normal createCanvas() when using createStereoCanvas().  
 bufferDistance adds space between the stereo images (in pixels) which can be used to push the images apart from each other to reduce eye strain. play with this value depending on your phone and viewer combo
 ```javascript
 function setup(){

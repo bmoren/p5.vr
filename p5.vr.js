@@ -3,15 +3,10 @@ console.log("+~+~ p5.vr ~+~+");
 p5.prototype._duplicateCanvas
 p5.prototype._originalCanvas
 
-p5.prototype.createStereoCanvas = function(renderer, PD){
+p5.prototype.createStereoCanvas = function(renderer, eyeBuffer){
+  var eyeBuffer = (typeof eyeBuffer !== 'undefined') ?  eyeBuffer : 0;
 
- // <meta name="viewport" content = "width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
-  // var meta = document.createElement('meta');
-  // meta.name = "viewport";
-  // meta.content = "width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no";
-  // document.getElementsByTagName('head')[0].appendChild(meta);
-
-  createCanvas((windowWidth/2)-PD, windowHeight, renderer);
+  createCanvas((windowWidth/2)-eyeBuffer, windowHeight, renderer);
 
   _originalCanvas = document.getElementById('defaultCanvas0');
 
@@ -24,7 +19,7 @@ p5.prototype.createStereoCanvas = function(renderer, PD){
   dc.height = _originalCanvas.height;
   dc.style.position = 'absolute';
   dc.style.top = 0;
-  dc.style.left = (_originalCanvas.width/2) + PD*2;
+  dc.style.left = (_originalCanvas.width/2) + eyeBuffer*2;
   dc.style.width = _originalCanvas.width/2;
   dc.style.height = _originalCanvas.height/2;
 
