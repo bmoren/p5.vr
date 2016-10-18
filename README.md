@@ -2,8 +2,8 @@
 ![p5.vr](p5.vr.png)
 #### VR stereo canvas and orbit controls for p5.js
 
-## Tested Phones
-iPhone 6s
+## Tested Phones / Browsers
++ iPhone 6s / iOS safari 10
 
 ## Tested Viewers
 + Google Cardboard (Sundance Edition)
