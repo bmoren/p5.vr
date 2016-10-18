@@ -9,8 +9,8 @@ iPhone 6s
 + Google Cardboard (Sundance Edition)
 
 ## Tips
-[using Safari's tethered development tools](http://appletoolbox.com/2014/05/use-web-inspector-debug-mobile-safari/)
-for most stable results, add the following inside of your `index.html`'s head tag
++ [using Safari's tethered development tools](http://appletoolbox.com/2014/05/use-web-inspector-debug-mobile-safari/)
++ for most stable results, add the following inside of your `index.html`'s head tag
 ```html
 <meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
 ```
