@@ -4,11 +4,15 @@ function setup(){
   teapot = loadModel('teapot.obj');
   orientationLock();
 
+  if(deviceOrientation == 'portrait'){
+    alert('please rotate your phone!')
+  }
+
 }
 
 function draw(){
   background(0);
-  var radius = width * 1.5;
+
 
   VRorbitControl();
   // orbitControl();
@@ -18,6 +22,7 @@ function draw(){
 
   // box();
   model(teapot);
+
 
 
   updateStereo();

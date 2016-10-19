@@ -40,7 +40,7 @@ p5.prototype.vrY = function(){
 
 p5.prototype._compassdir = false;
   window.addEventListener('deviceorientation', function(e) {
-      _compassdir = e.webkitCompassHeading;
+      _compassdir = map(e.webkitCompassHeading,0,360,360,0);
   })
 
 p5.prototype.vrX = function(){

@@ -12,6 +12,7 @@
 code found in the examples folder
 + [Basic 2D example](https://bmoren.github.io/p5.vr/examples/basic2D/)
 + [Basic 3D example](https://bmoren.github.io/p5.vr/examples/basic3D/)
++ [many teapots](https://bmoren.github.io/p5.vr/examples/teapot_city/)
 
 ## Setup
 + [using Safari's tethered development tools](http://appletoolbox.com/2014/05/use-web-inspector-debug-mobile-safari/)
