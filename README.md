@@ -65,7 +65,7 @@ function setup(){
 ```
 
 #### `vrX()`
-returns the X orientation of of the orbit. The wide axis when looking at a 'landscape' mode phone. Returns false if the browser cannot get the webkitCompassHeading
+returns the X orientation of of the orbit. The wide axis when looking at a 'landscape' mode phone. 
 ```javascript
 function draw() {
   console.log( vrX() ) // returns a value between PI, TWO_PI

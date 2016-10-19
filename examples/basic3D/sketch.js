@@ -14,9 +14,10 @@ function draw(){
   background(0);
 
 
-  VRorbitControl();
-  // orbitControl();
+  // VRorbitControl();
+  orbitControl();
   console.log( vrX() )
+  console.log( vrY() )
 
   normalMaterial();
 
