@@ -43,7 +43,7 @@ function draw() {
   ellipse(x,y,100,100)
   //...
 
-  updateStereo();
+  updateStereo() // duplicate the left eye to the right eye
 }
 ```
 
@@ -51,7 +51,7 @@ function draw() {
 Add sensor/gyroscope based orbit control to the camera in 3D scenes
 ```javascript
 function draw() {
-  VRorbitControl()
+  VRorbitControl() //look to move the world
   //...
 }
 ```
@@ -68,7 +68,7 @@ function setup(){
 returns the X orientation of of the orbit. The wide axis when looking at a 'landscape' mode phone. Returns false if the browser cannot get the webkitCompassHeading
 ```javascript
 function draw() {
-  console.log( vrX() )
+  console.log( vrX() ) // returns a value between 0, 360
   //...
 }
 ```
@@ -77,13 +77,30 @@ function draw() {
 returns the Y orientation of of the orbit.
 ```javascript
 function draw() {
-  console.log( vrY() )
+  console.log( vrY() ) //returns a value between -PI, PI
   //...
 }
 ```
 
 #### [`deviceOrientation`](http://p5js.org/reference/#/p5/deviceOrientation)
 p5js' standard system variable deviceOrientation always contains the orientation of the device. The value of this variable will either be set 'landscape' or 'portrait'. If no data is available it will be set to 'undefined'.
+```javascript
+function setup(){
+  if(deviceOrientation == 'portrait'){
+    alert('please rotate your phone!')
+  }
+}
+```
+
+#### [`orbitControl()`](http://p5js.org/examples/3d-orbit-control.html)
+prjs' built in mouse based orbit control for non-vr use. This is a useful function for debugging your projects. You can toggle between this and VRorbitControl() when moving between desktop and mobile development environments.
+```javascript
+function draw() {
+  orbitControl() // drag to move the world.
+  // VRorbitControl(); //turn me off to use the mouse based orbitControl()
+  //...
+}
+```
 
 ## Full example
 ```javascript
