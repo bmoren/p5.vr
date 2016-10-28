@@ -26,7 +26,7 @@ function draw(){
   background(0);
   VRorbitControl();
 
-  // console.log(vrX()) 
+  console.log(vrX()) 
 
   normalMaterial();
   for(var i=0; i < 100;i++){
