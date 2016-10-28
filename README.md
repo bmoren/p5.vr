@@ -15,6 +15,7 @@ code found in the examples folder
 + [many teapots](https://bmoren.github.io/p5.vr/examples/teapot_city/)
 
 ## Setup
++ [How to Add a library to your p5.js sketch](http://p5js.org/libraries/#using-a-library)
 + [using Safari's tethered development tools](http://appletoolbox.com/2014/05/use-web-inspector-debug-mobile-safari/)
 + for most stable results, add the following inside of your `index.html`'s head tag
 ```html
@@ -56,16 +57,16 @@ function draw() {
 }
 ```
 
-#### `orientationLock()`
+<!-- #### `orientationLock()`
 locks the phone in landscape mode to prevent it from going to portrait or doing a landscape 'flip'. coming soon, if this is even possible......
 ```javascript
 function setup(){
   orientationLock()
 }
-```
+``` -->
 
 #### `vrX()`
-returns the X orientation of of the orbit. The wide axis when looking at a 'landscape' mode phone. 
+returns the X orientation of of the orbit. The wide axis when looking at a 'landscape' mode phone.
 ```javascript
 function draw() {
   console.log( vrX() ) // returns a value between PI, TWO_PI

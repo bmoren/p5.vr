@@ -13,7 +13,6 @@ function setup(){
 function draw(){
   background(0);
 
-
   VRorbitControl();
   // orbitControl();
   console.log( vrX() )
@@ -23,8 +22,6 @@ function draw(){
 
   // box();
   model(teapot);
-
-
 
   updateStereo();
 }
