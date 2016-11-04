@@ -4,7 +4,6 @@ function setup(){
   // createCanvas(710, 400, WEBGL);
   createStereoCanvas(WEBGL, 50);
   teapot = loadModel('teapot.obj');
-  orientationLock();
 
   if(deviceOrientation == 'portrait'){
     alert('please rotate your phone!')
@@ -19,14 +18,15 @@ function setup(){
     var pos = {'x':x, 'y':y, 'z':z}
     pots.push(pos);
   }
-
+  // _getDeviceType();
+  console.log(getDeviceType())
 }
 
 function draw(){
   background(0);
   VRorbitControl();
 
-  console.log(vrX()) 
+  console.log(vrX())
 
   normalMaterial();
   for(var i=0; i < 100;i++){

@@ -24,6 +24,7 @@ code found in the examples folder
 ```html
 <meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
 ```
++ Remember that .obj files cannot be loaded in cross origins! 
 
 ## Documentation
 
@@ -86,6 +87,16 @@ function draw() {
 }
 ```
 
+#### `getDeviceType()`
+returns the type of device. Returns a value of 'iphone', 'ipad', 'android', 'macintosh', 'windows'
+```javascript
+function setup() {
+  if(getDeviceType() == 'iphone'){
+    //iphone specific changes here
+  }
+}
+```
+
 #### [`deviceOrientation`](http://p5js.org/reference/#/p5/deviceOrientation)
 p5js' standard system variable deviceOrientation always contains the orientation of the device. The value of this variable will either be set 'landscape' or 'portrait'. If no data is available it will be set to 'undefined'.
 ```javascript
@@ -95,6 +106,8 @@ function setup(){
   }
 }
 ```
+
+
 
 #### [`orbitControl()`](http://p5js.org/examples/3d-orbit-control.html)
 prjs' built in mouse based orbit control for non-vr use. This is a useful function for debugging your projects. You can toggle between this and VRorbitControl() when moving between desktop and mobile development environments.

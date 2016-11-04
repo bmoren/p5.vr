@@ -64,4 +64,21 @@ p5.prototype.orientationLock = function(){
 //... coming soon?
 }
 
+p5.prototype.getDeviceType = function(){
+  var userAgent = window.navigator.userAgent.toLowerCase();
+
+  var ua = ['iphone','ipad','android', 'macintosh', 'windows']
+  for(i=0;i<=ua.length;i++){
+    var find = userAgent.indexOf(ua[i]) !== -1;
+    if(find == true){
+      return ua[i];
+    }
+  }
+}
+
+
+
+
+
+
 
