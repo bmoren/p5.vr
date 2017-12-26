@@ -2,8 +2,8 @@
 ![p5.vr](p5.vr.png)
 #### VR stereo canvas and orbit controls for p5.js
 
-## Help!
-I need your help! please make a pull request, most especially if you are an android user / developer!
+## Status
+This repo is nolonger under active development (if you want to adopt it and or/expand it, let me know!)
 
 ## Tested Phones / Browsers
 + iPhone 6s / iOS safari 10
